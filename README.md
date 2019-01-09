@@ -8,4 +8,4 @@ First steps working with DDD
 - [ ] Events Kibana Elasticsearch Rabbit
 
 Use Docker form https://github.com/jorge07
-[![Build Status](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME}.png?branch=master)](https://travis-ci.org/{ORG-or-USERNAME}/{REPO-NAME})
+[![Build Status](https://travis-ci.org/chuajose/ddd-pruebas.png?branch=master)](https://travis-ci.org/chuajose/ddd-pruebas)
