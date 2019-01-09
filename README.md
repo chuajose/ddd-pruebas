@@ -16,3 +16,7 @@ Test Coverage
 ```
 ./vendor/bin/phpunit --coverage-html reports/
 ```
+
+
+vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+vendor/bin/php-coveralls -v
