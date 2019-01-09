@@ -3,5 +3,5 @@
 First steps working with DDD
 
 - [x] Create users
-- [ ] Login users
+- [x] Login users
 - [ ] Use JWT
