@@ -20,7 +20,8 @@ env:
 
 # Update composer, and update Symfony version depending on the matrix
 before_install:
-  - composer selfupdate
+  - composer self-update
+  - composer install --prefer-source --no-interaction --dev
   - if [ "$SYMFONY_VERSION" != "" ]; then composer require --dev --no-update symfony/symfony:$SYMFONY_VERSION; fi
 
 # Install composer dependencies,
@@ -42,6 +43,7 @@ after_success: |
 # After a build, sends a notification to this e-mail with the build results.
 notifications:
   email: chua.jose@gmail.com
+
 deploy:
   provider: heroku
   apy_key:
