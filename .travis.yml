@@ -34,8 +34,8 @@ install:
 #  - composer require --dev satooshi/php-coveralls:~0.6
 
 # Run script and log coverage in the "build" directory
-script:
-  - vendor/bin/phpunit --coverage-text --coverage-clover build/coverage-clover.xml
+#script:
+#  - vendor/bin/phpunit --coverage-text --coverage-clover build/coverage-clover.xml
 
 # Run coveralls after success and if not in hhvm (too much cache, incorrect coverage)
 after_success: |
@@ -46,6 +46,5 @@ notifications:
 
 deploy:
   provider: heroku
-  apy_key:
-    secure: 73fb54d7-ffd4-4bda-8367-5d73fbb9b6fb
+  apy_key: 73fb54d7-ffd4-4bda-8367-5d73fbb9b6fb
   app: ddd-pruebas
