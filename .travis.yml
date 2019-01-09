@@ -1,1 +1,5 @@
 language: php
+deploy:
+  provider: heroku
+  apy_key:
+    secure: 73fb54d7-ffd4-4bda-8367-5d73fbb9b6fb
