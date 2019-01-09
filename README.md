@@ -1,4 +1,5 @@
 # ddd-pruebas
+[![Build Status](https://travis-ci.org/chuajose/ddd-pruebas.png?branch=master)](https://travis-ci.org/chuajose/ddd-pruebas)
 
 First steps working with DDD
 
@@ -8,4 +9,3 @@ First steps working with DDD
 - [ ] Events Kibana Elasticsearch Rabbit
 
 Use Docker form https://github.com/jorge07
-[![Build Status](https://travis-ci.org/chuajose/ddd-pruebas.png?branch=master)](https://travis-ci.org/chuajose/ddd-pruebas)
