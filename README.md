@@ -9,3 +9,9 @@ First steps working with DDD
 - [ ] Events Kibana Elasticsearch Rabbit
 
 Use Docker form https://github.com/jorge07
+
+
+Test Coverage
+```
+./vendor/bin/phpunit --coverage-html reports/
+```
