@@ -9,7 +9,6 @@ First steps working with DDD
 - [ ] Use JWT
 - [ ] Events Kibana Elasticsearch Rabbit
 
-Use Docker form https://github.com/jorge07
 
 
 Test Coverage
@@ -18,5 +17,9 @@ Test Coverage
 ```
 
 
-vendor/bin/phpunit --coverage-clover build/logs/clover.xml
-vendor/bin/php-coveralls -v
+Generate Coveralls
+```
+./vendor/bin/phpunit --coverage-clover build/logs/clover.xml
+./vendor/bin/php-coveralls -v
+```
+Use Docker to php7.2 from https://github.com/jorge07
