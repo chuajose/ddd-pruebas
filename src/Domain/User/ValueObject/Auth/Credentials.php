@@ -18,7 +18,13 @@ class Credentials
      */
     public $password;
 
-    public function __construct(Email $email, HashedPassword $password)
+	/**
+	 * Credentials constructor.
+	 *
+	 * @param Email $email
+	 * @param HashedPassword $password
+	 */
+	public function __construct(Email $email, HashedPassword $password)
     {
         $this->email = $email;
         $this->password = $password;

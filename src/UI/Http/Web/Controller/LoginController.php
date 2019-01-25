@@ -41,17 +41,17 @@ class LoginController extends AbstractController{
 	public function login(AuthenticationUtils $authenticationUtils): Response
 	{
 
-		try{
+		/*try{
 			$email = Email::fromString('chua.jose@gmail.com');
 			$user = new User(new UserId(), $email, "Jose", 'chua', 'password', new \DateTimeImmutable(), new \DateTimeImmutable());
 			$this->createUser->save($user);
 			$users = $this->createUser->findAll();
 		}catch (\Exception $exception){
 
-			$message =  ($exception->getMessage());
+			$message =  ($exception->getMessage());chua
 			dd($message);
 			//$users = [];
-		}
+		}*/
 
 
 		// get the login error if there is one
