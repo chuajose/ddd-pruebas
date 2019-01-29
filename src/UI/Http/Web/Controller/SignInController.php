@@ -26,10 +26,10 @@ use App\Domain\User\Model\User;
 use App\Domain\User\Model\UserId;
 use App\Domain\User\Repository\UserRepositoryInterface;
 
-class LoginController extends AbstractController{
+class SignInController extends AbstractController{
 	/**
 	 * @Route(
-	 *     "/login",
+	 *     "/sign-in",
 	 *     name="login",
 	 *     methods={"GET"}
 	 * )

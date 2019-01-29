@@ -20,7 +20,12 @@ final class HashedPassword
         return $pass;
     }
 
-    public static function fromHash(string $hashedPassword): self
+	/**
+	 * @param string $hashedPassword
+	 *
+	 * @return HashedPassword
+	 */
+	public static function fromHash(string $hashedPassword): self
     {
         $pass = new self();
 
@@ -44,7 +49,10 @@ final class HashedPassword
         $this->hashedPassword = password_hash($plainPassword, PASSWORD_BCRYPT, ['cost' => self::COST]);
     }
 
-    public function toString(): string
+	/**
+	 * @return string
+	 */
+	public function toString(): string
     {
         return $this->hashedPassword;
     }

@@ -30,13 +30,17 @@ class UserTest extends TestCase
 		$id = new UserId();
 		$name = 'Jose';
 		$username = 'jose';
-		$password = 'secret';
+		$passwordPlain = 'secret';
 		$update_at = new \DateTimeImmutable();
 		$created_at = new \DateTimeImmutable();
+		$password = HashedPassword::encode($passwordPlain);
 
-		$user = new User($id, Email::fromString($emailString), $name, $username, HashedPassword::encode($password), $update_at, $created_at);
+		$user = new User($id, Email::fromString($emailString), $name, $username, $password, $update_at, $created_at);
 
 		self::assertSame($emailString, $user->email());
+		self::assertSame($username, $user->username());
+		self::assertSame($id, $user->getId());
+		self::assertSame($password, $user->getPassword());
 	}
 
 
@@ -62,6 +66,33 @@ class UserTest extends TestCase
 
 		$user = new User($id, Email::fromString($emailString), $name, $username, HashedPassword::encode($password), $update_at, $created_at);
 
+	}
+
+	/**
+	 * @test
+	 *
+	 * @group unit
+	 *
+	 * @throws \Exception
+	 * @throws \Assert\AssertionFailedException
+	 */
+	public function change_an_email_it_should_return_new_email(): void
+	{
+		$emailString = 'lol@aso.maximo';
+		$emailNewString = 'new@aso.maximo';
+		$id = new UserId();
+		$name = 'Jose';
+		$username = 'jose';
+		$password = 'secret';
+		$update_at = new \DateTimeImmutable();
+		$created_at = new \DateTimeImmutable();
+
+		$user = new User($id, Email::fromString($emailString), $name, $username, HashedPassword::encode($password), $update_at, $created_at);
+
+		$user->setEmail(Email::fromString($emailNewString));
+		$newMailReturn =$user->email();
+
+		self::assertSame($emailNewString, $newMailReturn);
 	}
 
 }

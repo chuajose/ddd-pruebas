@@ -12,6 +12,7 @@ namespace App\Domain\User\Repository;
 use App\Domain\User\Model\User;
 use App\Domain\User\Model\UserId;
 use App\Domain\User\ValueObject\Email;
+use Ramsey\Uuid\UuidInterface;
 
 interface UserRepositoryInterface {
 
@@ -19,5 +20,7 @@ interface UserRepositoryInterface {
 	function getById(UserId $id) :User;
 	function findByEmail(Email $email):?User;
 	function findAll(): array ;
+	function existsEmail(Email $email): ?UuidInterface;
+
 
 }

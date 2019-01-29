@@ -14,8 +14,16 @@ use App\Domain\User\Model\UserId;
 use App\Domain\User\ValueObject\Email;
 use Doctrine\ORM\EntityManagerInterface;
 use App\Domain\User\Repository\UserRepositoryInterface;
+use App\Domain\User\Repository\CheckUserByEmailInterface;
+use Ramsey\Uuid\UuidInterface;
 
 class DoctrineUserRepository  implements UserRepositoryInterface{
+
+	public function existsEmail(Email $email): ?UuidInterface
+	{
+		$userId = $this->findByEmail($email);
+		return ($userId) ? $userId->getId() : null;
+	}
 
 	public function save( User $user ): void {
 		$this->em->persist( $user );
