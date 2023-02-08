@@ -23,3 +23,4 @@ Generate Coveralls
 ./vendor/bin/php-coveralls -v
 ```
 Use Docker to php7.2 from https://github.com/jorge07
+sdemo
